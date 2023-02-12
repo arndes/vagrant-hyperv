@@ -1,0 +1,13 @@
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    eth0:
+      addresses:
+        - 10.98.0.xx/24
+      nameservers:
+        search: [hyperv.lab]
+        addresses: [8.8.8.8, 8.8.4.4]
+      routes:
+        - to: default
+          via: 10.98.0.1
